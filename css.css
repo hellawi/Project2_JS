@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+.text-heading{
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 36px;
+}
+.line-heading{
+    width: 536px;
+    margin-top: 36px;
+}
+.birthday{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.task3_img_box{
+    justify-content: space-between;
+    width: 256px;
+}
+.birthday-heading{
+    font-size: 16px;
+    text-align: center;
+}
+.fa-search{
+    background-image: url(./img/search.svg);
+    cursor: pointer;
+}
+.yearbirth{
+    width: 215px;
+    height: 35px;
+    position: relative;
+}
+
+section{
+    max-width: 1440px;
+    height: 3202px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./img/backgroundLeft.svg), url(./img/backgroundRight.svg);
+    background-position: left, right;
+    background-repeat: no-repeat;
+}
+.container{
+    width: 1090px;
+    height: 3202px;
+    border: 2px solid black;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.yearbirth .fa-search{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 0;
+}
+.year_birth{
+    width: 215px;
+    height: 35px;
+    background: #D7D7D7;
+    font-family: 'Montserrat Alternates', sans-serif;
+    padding: 10px 45px 10px 10px;
+    gap: 10px;
+    border: 2px solid #d7d7d7;
+    border-radius: 20px; 
+}
+.birth_result{
+    color: #039900;
+    font-size: 12px;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: row-reverse; */
+}
+.input__text{
+    display: flex;
+}
+.img_t2{
+    width: 60px;
+    height: 60px;
+    left: 592px;
+}
+.result_box{
+    margin-top: 46px;
+    text-align: center;
+}
+.variant_pc{
+    padding: 10px 20px;
+    background-color: #000000;
+    border: 1px solid black;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    border-radius: 20px;
+    margin-top: 36px;
+    cursor: pointer;
+    margin-bottom: 36px;
+}
+.result_text{
+    width: 76px;
+    height: 15px;
+    font-size: 12px;
+}
+.football{
+    width: 720px;
+    height: 220px;
+    background: #5ABB58;
+    border: 2px solid black;
+    border-radius: 27px;
+    margin-bottom: 36px;
+}
+.cursor{
+    margin-left: 485px;
+    margin-top: 99px;
+}
+.foot_ball{
+    margin-right: 578px;
+    margin-left: 78px;
+
+}
+.foot__ball{
+    margin-bottom: 36px;
+}
+.number{
+    margin-right: 38px;
+}
+.inputnumbers{
+    display: flex;
+    margin-right: 477px;
+}
+.result_heading{
+    color: #000;
+    text-align: center;
+}
+.task8_check{
+    text-align: center;
+}
+.task8_checkBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .rakhunok-box{
+    width: 93px;
+    height: 60px;
+    display: flex;
+    position: absolute;
+}
+.rakhunok-text{
+   font-size: 12px;
+} */
+
+
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 500px;
+      margin: 30px auto; /* для отображения модального окна по центру */
+  }
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.modal-header-text{
+    opacity: 0;
+    font-size: 15px;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+    width: 15px;
+    height: 15px;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+
+
+
+
+
+.switch{
+    position: relative;
+    width: 40px;
+    height: 20px;
+}
+.switch input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #7A7A7A;
+    transition: .4s;
+}
+.slider::before{
+    position: absolute;
+    content: url(./img/white.svg);
+    width: 20.5px;
+    height: 20px;
+    background-color: white;
+    transition: .4s;
+}
+input:checked + .slider{
+    background-color: #b1b1b1;
+}
+input:checked + .slider::before{
+    content: url(./img/dark.svg);
+    transform: translateX(20px);
+}
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round::before{
+    border-radius: 50%;
+}
+
+
+
+
+/* HEADER SECTION */
+
+.header {
+    /* background-color: #FFF;
+    
+    height: 80px; */
+    width: 1440px;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    background-color: #fff;
+}
+
+.header-text {
+    margin-left: 51px;
+}
+
+
+.header-text-span {
+    margin-left: 6px;
+}
+
+
+
+.dropbtn {
+    background-color: rgba(0,0,0,0);
+    color: #000;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+.dropdown-content {
+    margin-left: 108px;
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    min-width: 160px;
+}
+
+
+.dropdown-content a {
+    height: 35px;
+    width: 160px;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #F1F1F1F1}
+
+
+.show {display:block;}
+
+.first-dropdown-a {
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.second-dropdown-a {
+    padding-left: 47px;
+    padding-top: 10px;
+}
+
+.third-dropdown-a {
+    padding-left: 26px;
+    padding-top: 10px;
+}
+
+
+.arrow-img {
+    margin-left: 8px;
+    margin-top: 5px;
+    content: url(./img/arrow.svg);
+}
+
+.arrow-img:hover {
+    cursor: pointer;
+}
+
+.box {
+    margin-left: 108px;
+    display: flex;
+}
+
+.our-team-heading-header {
+    margin-left: 66px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+}
+
+.contacts-heading-header {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+}
+
+.Congratulation-box {
+    display: flex;
+    position: absolute;
+    left: 1440px;
+}
+
+.first-header-box {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 161px;
+}
+
+.contacts-heading-header {
+    margin-left: 66px;
+}
+
+.our-team-heading-header:hover {
+    cursor: pointer;
+}
+
+.contacts-heading-header {
+    cursor: pointer;
+}
+
+.header-text {
+    cursor: default;
+}
+
+body {
+    background: url('/img/background.png');
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN SECTION  */
+
+.mainbox {
+    background-color: #FFF;
+    width: 1453px;
+    height: 3202px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* FOOTER  */
+
+footer{
+    width: 1440px;
+    height: 220px;
+}
+
+.footer-box {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 220px;
+}
+
+.footer-p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+}
+
+.p-contacts-box {
+    width: 260px;
+}
+
+.email-input_box {
+    padding-top: 37px;
+}
+
+
+.email-input {
+    box-shadow: none;
+    appearance: none;
+    color: #000;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    border: none;
+    outline: none;
+    width: 230px;
+    height: 40px;
+    border: none;
+    padding-left: 11px;
+    background: #D7D7D7;
+    border-radius: 19px;
+}
+
+.input_placeholder {
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #7E7E7E;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    display: block;
+    position: absolute;
+    left: 1489px;
+    top: 3379px;
+}
+   
+
+.input_button {
+    margin-left: 34px;
+    position: absolute;
+    left: 1489px;
+    top: 3379px;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    background: #000;
+    width: 132px;
+    height: 40px;
+    border-radius: 19px;
+}
+
+.input_button:hover {
+    cursor: pointer;
+}
+
+.email-input:focus ~ .input_placeholder,
+.email-input:valid ~ .input_placeholder{
+    opacity: 0;
+}
+
+.footer-box {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.footer-p:hover {
+    cursor: default;
+}
+
+.input-footer-p {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 7px;
+    color: #000;
+    padding-top: 18px;
+
+}
+
+.dropdown-content  {
+    border: solid 1px black;
+    border-top: 0;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.third-dropdown-a {
+    border-radius: 0px 0px 20px 20px;
+}
+
+
+
+.world {
+    overflow: hidden;
+    position: relative;
+    width: 720px;
+    height: 241px;
+  }
+  
+  .score {
+    position: absolute;
+    font-size: 3vmin;
+    right: 1vmin;
+    top: 1vmin;
+  }
+  
+  .start-screen {
+    position: absolute;
+    font-size: 5vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .ground {
+    --left: 0;
+    position: absolute;
+    width: 300%;
+    bottom: 0;
+    left: calc(var(--left) * 1%)
+  }
+  
+  .dino {
+    --bottom: 0;
+    position: absolute;
+    left: 1%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+  }
+  
+  .cactus {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 0;
+  }
+  
+  .world {
+    max-width: 720px;
+    max-height: 297px;
+  }
+  
+  .start-screen {
+   font-size: 26px ;
+  }
+  
+  .score {
+    font-size: 26px;
+  }

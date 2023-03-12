@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css.css" />
+    <script src="./js/script.js" defer></script>
+    <script src="./js/scriptDino.js" type="module"></script>
+    <title>Coding Magic</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="first-header-box">
+        <a class="header-logo" href="#"
+          ><img src="./img/logo.png" alt="logo"
+        /></a>
+
+        <div class="dropdown">
+          <div class="box">
+            <button onclick="myFunction()" class="dropbtn">Інтерактив</button>
+            <div class="arrow-img"></div>
+          </div>
+          <div id="myDropdown" class="dropdown-content">
+            <a class="first-dropdown-a" href="#">Числовий</a>
+            <a class="second-dropdown-a" href="#">Ігровий</a>
+            <a class="third-dropdown-a" href="#">Ознайомчий</a>
+          </div>
+        </div>
+
+        <h2 class="our-team-heading-header">Наша команда</h2>
+        <h2 class="contacts-heading-header">Контакти</h2>
+      </div>
+
+      <div class="Congratulation-box">
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+        <div class="header-text">
+          <p>Вітаємо,</p>
+          <span class="header-text-span"></span>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <main class="container">
+        <h1 class="text-heading">Популярні інтерактивні ігри</h1>
+        <hr class="line-heading" />
+
+        <div class="task1">
+          <div class="birthday">
+            <h2 class="birthday-heading">Перевір в який рік ти народився</h2>
+          </div>
+
+          <div class="input__text">
+            <div class="yearbirth">
+              <input
+                type="number"
+                name=""
+                class="year_birth"
+                placeholder="Введіть рік народження"
+              />
+              <i class="fa-search"></i>
+            </div>
+            <div class="result_container">
+              <h2 class="birth_result"></h2>
+            </div>
+          </div>
+        </div>
+
+        <hr class="line-heading" />
+
+        <div class="task3">
+          <p class="birthday-heading">Камінь - ножиці - папір</p>
+
+          <div class="birthday task3_img_box">
+            <img src="./img/kamin.png" alt="" class="img_t2 img_1" />
+            <img src="./img/nozhnitzy.png" alt="" class="img_t2 img_2" />
+            <img src="./img/a4.png" alt="" class="img_t2 img_3" />
+          </div>
+          <!-- <div class="rahkunok-box">
+                    <p class="rakhunok-text">
+                        Рахунок:
+                        <span class="pc">Комп'ютер - </span>
+                        <span class="im">Ви -</span>
+                    </p>
+                </div> -->
+          <div class="result_container">
+            <h2 class="birth_result result_box">Ви виграли раунд!</h2>
+          </div>
+          <input type="button" value="Варіант комп'ютера" class="variant_pc" />
+        </div>
+
+        <hr class="line-heading" />
+
+        <div class="task5">
+          <div class="birthday">
+            <h2 class="birthday-heading">Калькулятор часу</h2>
+          </div>
+
+          <div class="input__text">
+            <div class="yearbirth">
+              <input
+                type="number"
+                name=""
+                class="year_birth task5_input"
+                placeholder="Введіть число"
+              />
+              <i class="fa-search task5"></i>
+            </div>
+            <div class="result_container">
+              <p>..............</p>
+              <p class="result_text result_task5"></p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="line-heading" />
+
+        <div class="task7">
+          <div class="birthday foot__ball">
+            <h2 class="birthday-heading">Футбол</h2>
+          </div>
+
+          <div class="football">
+            <img src="./img/cursor.png" alt="" class="cursor" />
+            <img src="./img/foot_ball.png" alt="" class="foot_ball" />
+          </div>
+        </div>
+
+        <hr class="line-heading" />
+
+        <div class="task8">
+          <div class="birthday">
+            <h2 class="birthday-heading">Введіть 3 числа</h2>
+          </div>
+
+          <div class="yearbirth inputnumbers">
+            <input
+              type="number"
+              name=""
+              class="year_birth number number_1"
+              placeholder="Введіть число"
+            />
+            <input
+              type="number"
+              name=""
+              class="year_birth number number_2"
+              placeholder="Введіть число"
+            />
+            <input
+              type="number"
+              name=""
+              class="year_birth number number_3"
+              placeholder="Введіть число"
+            />
+          </div>
+          <div class="task8_checkBox">
+            <input
+              type="button"
+              value="Перевірити"
+              class="variant_pc task8_check"
+              id="check_button"
+            />
+          </div>
+          <div class="result_container">
+            <h2 class="birth_result result_heading">
+              Найбільше число, яке ви ввели -
+              <span class="result_number"></span>
+            </h2>
+          </div>
+        </div>
+
+        <hr class="line-heading" />
+
+        <div class="dinosaur birthday">
+            <div class="world" data-world>
+                <div class="score" data-score>0</div>
+                <div class="start-screen" data-start-screen>Натисніть SPACE щоб почати</div>
+                <img src="./img/ground.png" class="ground" data-ground>
+                <img src="./img/ground.png" class="ground" data-ground>
+                <img src="./img/dino-stationary.png" class="dino" data-dino>
+              </div>
+        </div>
+
+        <hr class="line-heading">
+
+
+        <a href="#openModal">Открыть модальное окно</a>
+        <div id="openModal" class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-header-text">asasasd</h1>
+                <a href="#close" title="Close" class="close">x</a>
+              </div>
+              <div class="modal-body">
+                <p>Содержимое модального окна...</p>
+                <label class="name_form">
+                  <input type="text" class="input_name" placeholder="имя" />
+                  <button class="value_btn">Зберегти</button>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <footer>
+      <div class="footer-box">
+        <a class="footer-logo" href="#"
+          ><img src="./img/logo-footer.png" alt="logo"
+        /></a>
+        <div class="p-contacts-box">
+          <p class="footer-p">
+            Тел: +38 (123) 456 78 90 Mail:codingmagic@gmail.com Facebook:
+            CodingMagic Twitter: CodingMagic Instagram: CodingMagic
+          </p>
+        </div>
+        <div class="email-input_box">
+          <label class="input-label">
+            <input required="required" type="text" class="email-input" />
+            <span class="input_placeholder"></span>
+            <div class="footer-btn-box">
+              <button class="input_button">Підписатись</button>
+            </div>
+            <p class="input-footer-p">
+              *Підписавшись, Ви зможете отримувати інформацію про новинки на
+              сайті
+            </p>
+          </label>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
