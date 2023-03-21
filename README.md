@@ -1,1 +1,1 @@
-# Project2_JS
+Cooperative project "Popular interactive games"
