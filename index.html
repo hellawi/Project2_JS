@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css.css" />
     <script src="./js/script.js" defer></script>
-    <script src="./js/scriptDino.js" type="module"></script>
+    <script src="./dino/script.js" type="module"></script>
     <title>Coding Magic</title>
   </head>
   <body>
@@ -72,6 +72,29 @@
 
         <hr class="line-heading" />
 
+        <div class="task2">
+          <div class="birthday">
+            <h2 class="birthday-heading">Вгадай число, яке загадав комп'ютер</h2>
+          </div>
+
+          <div class="input__text">
+            <div class="yearbirth">
+              <input
+                type="number"
+                name=""
+                class="year_birth rnd_input"
+                placeholder="Введіть число"
+              />
+              <i class="fa-search" id="fa-search_h"></i>
+            </div>
+            <div class="result_container">
+              <h2 class="birth_result" id="rndRes"></h2>
+            </div>
+          </div>
+        </div>
+
+        <hr class="line-heading">
+
         <div class="task3">
           <p class="birthday-heading">Камінь - ножиці - папір</p>
 
@@ -88,12 +111,43 @@
                     </p>
                 </div> -->
           <div class="result_container">
-            <h2 class="birth_result result_box">Ви виграли раунд!</h2>
+            <h2 class="result_box">Ви виграли раунд!</h2>
           </div>
           <input type="button" value="Варіант комп'ютера" class="variant_pc" />
         </div>
 
         <hr class="line-heading" />
+        <div class="task4">
+          <div class="birthday">
+            <h2 class="birthday-heading">Калькулятор</h2>
+          </div>
+          <div class="yearbirth inputnumbers">
+            <input
+              type="number"
+              name=""
+              class="year_birth number number_1 number-01"
+              placeholder="Введіть число"
+            />
+            <div class="operation">
+              <button class="plus operation_button">+</button>
+              <button class="multiply operation_button">*</button>
+            </div>
+            <div class="operationbox-2">
+              <button class="minus operation_button">-</button>
+              <button class="divide operation_button">/</button>
+            </div>
+            <input
+              type="number"
+              name=""
+              class="year_birth number number_2 number-02"
+              placeholder="Введіть число"
+            />
+            <button class="ravno operation_button">=</button>
+            <div class="year_birth number number_2" id="result4">Результат</div>
+          </div>
+        </div>
+
+        <hr class="line-heading">
 
         <div class="task5">
           <div class="birthday">
@@ -125,8 +179,8 @@
           </div>
 
           <div class="football">
-            <img src="./img/cursor.png" alt="" class="cursor" />
-            <img src="./img/foot_ball.png" alt="" class="foot_ball" />
+            <!-- <img src="./img/foot_ball.png" alt="" class="foot_ball" /> -->
+            <canvas class="canva"></canvas>
           </div>
         </div>
 
@@ -172,23 +226,31 @@
             </h2>
           </div>
         </div>
-
-        <hr class="line-heading" />
+        <hr class="line-heading">
 
         <div class="dinosaur birthday">
             <div class="world" data-world>
+              <div class="birthday">
+                <h2 class="birthday-heading">Google динозавр</h2>
+              </div>
                 <div class="score" data-score>0</div>
-                <div class="start-screen" data-start-screen>Натисніть SPACE щоб почати</div>
+                <div class="start-screen" data-start-screen></div>
                 <img src="./img/ground.png" class="ground" data-ground>
                 <img src="./img/ground.png" class="ground" data-ground>
                 <img src="./img/dino-stationary.png" class="dino" data-dino>
               </div>
         </div>
+        <hr class="line-heading">
+
+        <div class="our-team">
+          <h2 class="birthday-heading">Наша команда</h2>
+          <div class="box-myImg"></div>
+          <h2 class="birthday-heading">Міков Міхаель</h2>
+          <p class="info_student">Реалізував всю сторінку, включаючи JavaScript</p>
+        </div>
 
         <hr class="line-heading">
 
-
-        <a href="#openModal">Открыть модальное окно</a>
         <div id="openModal" class="modal">
           <div class="modal-dialog">
             <div class="modal-content">

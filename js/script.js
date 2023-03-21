@@ -1,3 +1,4 @@
+// task 1
 let input = document.querySelector(".year_birth")
 let button = document.querySelector(".fa-search")
 let result = document.querySelector(".birth_result")
@@ -16,8 +17,54 @@ button.addEventListener("click", function(){
     }
 })
 
+// task 2
+let inputRnd = document.querySelector(".rnd_input")
+let btnSearch = document.getElementById("fa-search_h")
+let resultRnd = document.getElementById("rndRes")
+btnSearch.addEventListener("click", function(){
+  console.log(getRandomNumber)
+  if(inputRnd.value == getRandomNumber){
+    resultRnd.innerHTML = `Вітаю, ви вгадали число! ${getRandomNumber}`
+    resultRnd.style.color = "green"
+  } else{
+    resultRnd.innerHTML = `Ви програли, комп’ютер загадав ${getRandomNumber}`
+    resultRnd.style.color = "red"
+  }
+  if(inputRnd.value > 255){
+    resultRnd.innerHTML = "Число має бути в діапазоні від 0 до 255!"
+    resultRnd.style.color = "red"
+  }
+})
+let getRandomNumber = Math.floor(Math.random() * (255 - 0) + 0);
 
+// task 4
+let plus = document.querySelector(".plus")
+let multiply = document.querySelector(".multiply")
+let minus = document.querySelector(".minus")
+let divide = document.querySelector(".divide")
+let numInput14 = document.querySelector(".number-01")
+let numInput24 = document.querySelector(".number-02")
+let resultT4 = document.getElementById("result4")
 
+var multiplicate = function(){
+  resultT4.innerHTML = +numInput14.value * +numInput24.value
+}
+var plussion = function(){
+  resultT4.innerHTML = +numInput14.value + +numInput24.value
+}
+var division = function(){
+  resultT4.innerHTML = +numInput14.value / +numInput24.value
+}
+var minussion = function(){
+  resultT4.innerHTML = +numInput14.value - +numInput24.value
+}
+
+plus.addEventListener("click", plussion)
+multiply.addEventListener("click", multiplicate)
+divide.addEventListener("click", division)
+minus.addEventListener("click", minussion)
+
+// header > interactive
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -35,7 +82,7 @@ if (!event.target.matches('.dropbtn')) {
 }
 }
 
-
+// modal > header
 let button_save = document.querySelector(".value_btn")
 let result_name = document.querySelector(".header-text-span")
 let input_name = document.querySelector(".input_name")
@@ -46,7 +93,7 @@ button_save.addEventListener("click", function(event){
 })
 
 
-
+// task 8
 const npt1 = document.querySelector(".number_1");
 const npt2 = document.querySelector(".number_2");
 const npt3 = document.querySelector(".number_3");
@@ -66,7 +113,7 @@ btn.addEventListener('click', event => {
 });
 
 
-
+// task 5
 let btnT_5 = document.querySelector(".task5")
 let resultT_5 = document.querySelector(".result_text")
 
@@ -84,3 +131,37 @@ btnT_5.addEventListener("click", function(){
   }
   resultT_5.innerHTML = `${day} дн. ${hours}:${minutes}:00`
 })
+
+// football
+let canvas = document.querySelector(".canva")
+let context = canvas.getContext("2d")
+let ball = new Image()
+
+canvas.addEventListener("click", function(event){
+  var mouseX = event.pageX
+  var mouseY = event.pageY
+  var block = document.querySelector(".canva")
+  var blockRectangle = block.getBoundingClientRect()
+  var blockX = blockRectangle.left
+  var blockY = blockRectangle.top
+  var mouseXblock = mouseX - mouseY - 25
+  var mouseYblock = mouseY - blockY - 25
+  console.log(mouseXblock)
+})
+var mouseXblock = 0
+var mouseYblock = 0
+ball.src = ".img/foot_ball.png"
+canvas.width = 720
+canvas.height = 220
+
+function draw(){
+  context.fillStyle = "green"
+  context.fillRect(0, 0, 720, 720)
+  context.drawImage(ball, mouseXblock, mouseYblock)
+  if(mouseXblock > 0){
+    context.fillStyle = "green"
+    context.fillRect(0, 0, 720, 720)
+    context.drawImage(ball, mouseXblock, mouseYblock)
+  }
+}
+setInterval(draw, 20)
