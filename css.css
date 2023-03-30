@@ -138,12 +138,9 @@ section{
     font-size: 12px;
     text-align: center;
 }
-.football{
-    /* width: 720px;
-    height: 220px; */
+.canva{
     border: 2px solid black;
     border-radius: 27px;
-    margin-bottom: 36px;
 }
 .foot_ball{
     margin-right: 578px;
@@ -161,7 +158,6 @@ section{
 }
 .result_heading{
     color: #000;
-    text-align: center;
 }
 .task8_check{
     text-align: center;
@@ -190,9 +186,14 @@ section{
 .rakhunok-text{
    font-size: 12px;
 } */
+.footer-btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
-.modal {
+.modal, .modall {
     position: absolute; /* фиксированное положение */
     top: 0;
     right: 0;
@@ -214,8 +215,13 @@ section{
 	pointer-events: auto; /* элемент видим для событий мыши */
     overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
+.modall:target {
+    opacity: 1; /* делаем окно видимым */
+	pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
 /* ширина модального окна и его отступы от экрана */
-.modal-dialog {
+.modal-dialog, .modall-dialog {
     position: relative;
     width: auto;
     margin: 10px;
@@ -225,9 +231,13 @@ section{
       max-width: 500px;
       margin: 30px auto; /* для отображения модального окна по центру */
   }
+  .modall-dialog {
+    max-width: 500px;
+    margin: 30px auto; /* для отображения модального окна по центру */
+}
 }
 /* свойства для блока, содержащего контент модального окна */ 
-.modal-content {
+.modal-content, .modall-content {
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -250,9 +260,13 @@ section{
       -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
       box-shadow: 0 5px 15px rgba(0,0,0,.5);
   }
+  .modall-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
 }
 /* свойства для заголовка модального окна */
-.modal-header {
+.modal-header, .modall-header {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -267,19 +281,19 @@ section{
     justify-content: space-between;
     padding: 15px;
 }
-.modal-title {
+.modal-title, .modall-title {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1.5;
     font-size: 1.25rem;
     font-weight: 500;
 }
-.modal-header-text{
+.modal-header-text, .modall-header-text{
     opacity: 0;
     font-size: 15px;
 }
 /* свойства для кнопки "Закрыть" */
-.close {
+.close, .closee {
     font-size: 24px;
     font-weight: 700;
     line-height: 1;
@@ -290,6 +304,12 @@ section{
     width: 15px;
     height: 15px;
 }
+.modal-text{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
 /* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
 .close:focus, .close:hover {
     color: #000;
@@ -298,7 +318,7 @@ section{
     opacity: .75;
 }
 /* свойства для блока, содержащего основное содержимое окна */
-.modal-body {
+.modal-body, .modall-body {
   position: relative;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
@@ -306,6 +326,9 @@ section{
     flex: 1 1 auto;
     padding: 15px;
     overflow: auto;
+    background-image: url(./img/bg-modal-header.png);
+    background-position: left, right;
+    background-repeat: no-repeat;
 }
 
 .switch{
@@ -542,7 +565,7 @@ footer{
 }
 
 .p-contacts-box {
-    width: 260px;
+    width: 300px;
 }
 
 .email-input_box {
@@ -588,21 +611,21 @@ footer{
    
 
 .input_button {
-    margin-left: 34px;
     position: absolute;
     left: 1234px;
     top: 3379px;
-    border: none;
     color: #FFFFFF;
     font-family: 'Montserrat Alternates';
-    font-style: normal;
     font-weight: 400;
     font-size: 15px;
-    line-height: 15px;
     background: #000;
     width: 132px;
     height: 40px;
     border-radius: 19px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input_button:hover {

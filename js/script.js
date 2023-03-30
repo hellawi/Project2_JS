@@ -37,6 +37,50 @@ btnSearch.addEventListener("click", function(){
 })
 let getRandomNumber = Math.floor(Math.random() * (255 - 0) + 0);
 
+// task 3
+const rock = document.querySelector(".img_1");
+const scissors = document.querySelector(".img_2");
+const paper = document.querySelector(".img_3");
+const result3 = document.querySelector(".result_box");
+const variantOfPC = document.querySelector(".variant_pc")
+const score3PLayerText = document.querySelector(".im")
+const score3PCText = document.querySelector(".pc")
+const score3PLayer = 0
+const score3PC = 0
+let arrItems = ["rock", "scissors", "paper"]
+let playerChoice;
+
+variantOfPC.addEventListener("click", function(){
+  let varianttOfPc = arrItems[getRandomChoice()];
+  if(playerChoice == "rock" && varianttOfPc == "scissors"){
+    result3.innerHTML = "Ви виграли раунд!"
+    score3PLayer++
+    score3PLayerText.innerHTML = "Ви - " + score3PLayer
+    score3PCText.innerHTML = "Ви - " + score3PC
+  } else if(playerChoice == "scissors" && varianttOfPc == "paper"){
+    result3.innerHTML = "Ви виграли раунд!"
+    score3PLayer++
+    score3PLayerText.innerHTML = "Ви - " + score3PLayer
+    score3PCText.innerHTML = "Ви - " + score3PC
+  } else if(playerChoice == "paper" && varianttOfPc == "rock"){
+    result3.innerHTML = "Ви виграли раунд!"
+    score3PLayer++
+    score3PLayerText.innerHTML = "Ви - " + score3PLayer
+    score3PCText.innerHTML = "Ви - " + score3PC
+  } else {
+    result3.innerHTML = "Комп'ютер виграв раунд!"
+    score3PC++
+    score3PLayerText.innerHTML = "Ви - " + score3PLayer
+    score3PCText.innerHTML = "Ви - " + score3PC
+  }
+})
+function getRandomChoice(){
+  return Math.floor(Math.random() * 3)
+}
+function playerChoiceFnctn(knp){
+  playerChoice = knp;
+}
+
 // task 4
 let plus = document.querySelector(".plus")
 let multiply = document.querySelector(".multiply")
@@ -135,22 +179,24 @@ btnT_5.addEventListener("click", function(){
 // football
 let canvas = document.querySelector(".canva")
 let context = canvas.getContext("2d")
-let ball = new Image()
+
+var mouseXblock = 0
+var mouseYblock = 0
 
 canvas.addEventListener("click", function(event){
   var mouseX = event.pageX
-  var mouseY = event.pageY
+  var mouseY = event.clientY
   var block = document.querySelector(".canva")
   var blockRectangle = block.getBoundingClientRect()
   var blockX = blockRectangle.left
   var blockY = blockRectangle.top
-  var mouseXblock = mouseX - mouseY - 25
-  var mouseYblock = mouseY - blockY - 25
-  console.log(mouseXblock)
+  mouseXblock = mouseX - blockX - 25
+  mouseYblock = mouseY - blockY - 25
 })
-var mouseXblock = 0
-var mouseYblock = 0
-ball.src = ".img/foot_ball.png"
+
+let ball = new Image()
+ball.src = "../img/foot_ball.png"
+
 canvas.width = 720
 canvas.height = 220
 
@@ -164,4 +210,4 @@ function draw(){
     context.drawImage(ball, mouseXblock, mouseYblock)
   }
 }
-setInterval(draw, 20)
+setInterval(draw, 30)

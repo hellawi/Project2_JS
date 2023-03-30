@@ -99,17 +99,17 @@
           <p class="birthday-heading">Камінь - ножиці - папір</p>
 
           <div class="birthday task3_img_box">
-            <img src="./img/kamin.png" alt="" class="img_t2 img_1" />
-            <img src="./img/nozhnitzy.png" alt="" class="img_t2 img_2" />
-            <img src="./img/a4.png" alt="" class="img_t2 img_3" />
+            <img src="./img/kamin.png" alt="" class="img_t2 img_1" onclick="playerChoiceFnctn()" />
+            <img src="./img/nozhnitzy.png" alt="" class="img_t2 img_2" onclick="playerChoiceFnctn()" />
+            <img src="./img/a4.png" alt="" class="img_t2 img_3" onclick="playerChoiceFnctn()" />
           </div>
-          <!-- <div class="rahkunok-box">
+          <div class="rahkunok-box">
                     <p class="rakhunok-text">
                         Рахунок:
                         <span class="pc">Комп'ютер - </span>
-                        <span class="im">Ви -</span>
+                        <span class="im">Ви - </span>
                     </p>
-                </div> -->
+          </div>
           <div class="result_container">
             <h2 class="result_box">Ви виграли раунд!</h2>
           </div>
@@ -179,7 +179,6 @@
           </div>
 
           <div class="football">
-            <!-- <img src="./img/foot_ball.png" alt="" class="foot_ball" /> -->
             <canvas class="canva"></canvas>
           </div>
         </div>
@@ -278,8 +277,8 @@
         /></a>
         <div class="p-contacts-box">
           <p class="footer-p">
-            Тел: +38 (123) 456 78 90 Mail:codingmagic@gmail.com Facebook:
-            CodingMagic Twitter: CodingMagic Instagram: CodingMagic
+            Тел: +38 (123) 456 78 90 <br>E-mail: codingmagic@gmail.com Facebook:
+            CodingMagic <br>Twitter: CodingMagic <br>Instagram: CodingMagic
           </p>
         </div>
         <div class="email-input_box">
@@ -287,7 +286,7 @@
             <input required="required" type="text" class="email-input" />
             <span class="input_placeholder"></span>
             <div class="footer-btn-box">
-              <button class="input_button">Підписатись</button>
+              <a class="input_button" href="#openModall">Підписатись</a>
             </div>
             <p class="input-footer-p">
               *Підписавшись, Ви зможете отримувати інформацію про новинки на
@@ -297,5 +296,18 @@
         </div>
       </div>
     </footer>
+    <div id="openModall" class="modall">
+      <div class="modall-dialog">
+        <div class="modall-content">
+          <div class="modall-header">
+            <h3 class="modall-title"></h3>
+            <a href="#close" title="Close" class="closee">x</a>
+          </div>
+          <div class="modall-body">    
+            <p class="modal-text">Дякую за підписку!</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
