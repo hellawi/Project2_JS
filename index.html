@@ -10,7 +10,7 @@
     <title>Coding Magic</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="themeMode">
       <div class="first-header-box">
         <a class="header-logo" href="#"
           ><img src="./img/logo.png" alt="logo"
@@ -34,7 +34,7 @@
 
       <div class="Congratulation-box">
         <label class="switch">
-          <input type="checkbox" />
+          <input type="checkbox" id="btnSwitch" />
           <span class="slider round"></span>
         </label>
         <div class="header-text">
@@ -45,7 +45,7 @@
     </header>
 
     <section>
-      <main class="container">
+      <main class="container"  id="themeMode">
         <h1 class="text-heading">Популярні інтерактивні ігри</h1>
         <hr class="line-heading" />
 
@@ -65,7 +65,7 @@
               <i class="fa-search"></i>
             </div>
             <div class="result_container">
-              <h2 class="birth_result"></h2>
+              <h2 class="birth_result">Тут буде результат</h2>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@
               <i class="fa-search" id="fa-search_h"></i>
             </div>
             <div class="result_container">
-              <h2 class="birth_result" id="rndRes"></h2>
+              <h2 class="birth_result" id="rndRes">Тут буде результат</h2>
             </div>
           </div>
         </div>
@@ -99,9 +99,9 @@
           <p class="birthday-heading">Камінь - ножиці - папір</p>
 
           <div class="birthday task3_img_box">
-            <img src="./img/kamin.png" alt="" class="img_t2 img_1" onclick="playerChoiceFnctn()" />
-            <img src="./img/nozhnitzy.png" alt="" class="img_t2 img_2" onclick="playerChoiceFnctn()" />
-            <img src="./img/a4.png" alt="" class="img_t2 img_3" onclick="playerChoiceFnctn()" />
+            <img src="./img/kamin.png" alt="" class="img_t2 img_1" onclick="playerChoiceFnctn(`rock`)" />
+            <img src="./img/nozhnitzy.png" alt="" class="img_t2 img_2" onclick="playerChoiceFnctn(`scissors`)" />
+            <img src="./img/a4.png" alt="" class="img_t2 img_3" onclick="playerChoiceFnctn(`paper`)" />
           </div>
           <div class="rahkunok-box">
                     <p class="rakhunok-text">
@@ -111,7 +111,7 @@
                     </p>
           </div>
           <div class="result_container">
-            <h2 class="result_box">Ви виграли раунд!</h2>
+            <h2 class="result_box">Тут буде результат</h2>
           </div>
           <input type="button" value="Варіант комп'ютера" class="variant_pc" />
         </div>
@@ -219,7 +219,7 @@
             />
           </div>
           <div class="result_container">
-            <h2 class="birth_result result_heading">
+            <h2 class="result_heading">
               Найбільше число, яке ви ввели -
               <span class="result_number"></span>
             </h2>
@@ -271,7 +271,7 @@
     </section>
 
     <footer>
-      <div class="footer-box">
+      <div class="footer-box" id="themeMode">
         <a class="footer-logo" href="#"
           ><img src="./img/logo-footer.png" alt="logo"
         /></a>

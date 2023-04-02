@@ -45,8 +45,8 @@ const result3 = document.querySelector(".result_box");
 const variantOfPC = document.querySelector(".variant_pc")
 const score3PLayerText = document.querySelector(".im")
 const score3PCText = document.querySelector(".pc")
-const score3PLayer = 0
-const score3PC = 0
+let score3PLayer = 0
+let score3PC = 0
 let arrItems = ["rock", "scissors", "paper"]
 let playerChoice;
 
@@ -54,24 +54,34 @@ variantOfPC.addEventListener("click", function(){
   let varianttOfPc = arrItems[getRandomChoice()];
   if(playerChoice == "rock" && varianttOfPc == "scissors"){
     result3.innerHTML = "Ви виграли раунд!"
+    result3.style.color = "green"
     score3PLayer++
     score3PLayerText.innerHTML = "Ви - " + score3PLayer
-    score3PCText.innerHTML = "Ви - " + score3PC
+    score3PCText.innerHTML = "Комп'ютер - " + score3PC
   } else if(playerChoice == "scissors" && varianttOfPc == "paper"){
     result3.innerHTML = "Ви виграли раунд!"
+    result3.style.color = "green"
     score3PLayer++
     score3PLayerText.innerHTML = "Ви - " + score3PLayer
-    score3PCText.innerHTML = "Ви - " + score3PC
+    score3PCText.innerHTML = "Комп'ютер - " + score3PC
   } else if(playerChoice == "paper" && varianttOfPc == "rock"){
     result3.innerHTML = "Ви виграли раунд!"
+    result3.style.color = "green"
     score3PLayer++
     score3PLayerText.innerHTML = "Ви - " + score3PLayer
-    score3PCText.innerHTML = "Ви - " + score3PC
-  } else {
+    score3PCText.innerHTML = "Комп'ютер - " + score3PC
+  } else if(playerChoice == varianttOfPc){
+    result3.style.color = "black"
+    result3.innerHTML = "Нічия!"
+    score3PLayerText.innerHTML = "Ви - " + score3PLayer
+    score3PCText.innerHTML = "Комп'ютер - " + score3PC
+  }
+  else {
     result3.innerHTML = "Комп'ютер виграв раунд!"
+    result3.style.color = "red"
     score3PC++
     score3PLayerText.innerHTML = "Ви - " + score3PLayer
-    score3PCText.innerHTML = "Ви - " + score3PC
+    score3PCText.innerHTML = "Комп'ютер - " + score3PC
   }
 })
 function getRandomChoice(){
@@ -127,14 +137,14 @@ if (!event.target.matches('.dropbtn')) {
 }
 
 // modal > header
-let button_save = document.querySelector(".value_btn")
-let result_name = document.querySelector(".header-text-span")
-let input_name = document.querySelector(".input_name")
-let form = document.querySelector(".name_form")
-button_save.addEventListener("click", function(event){
-  form.onsubmit = event.preventDefault()
-  result_name.textContent = input_name.value;
-})
+// let button_save = document.querySelector(".value_btn")
+// let result_name = document.querySelector(".header-text-span")
+// let input_name = document.querySelector(".input_name")
+// let form = document.querySelector(".name_form")
+// button_save.addEventListener("click", function(event){
+//   form.onsubmit = event.preventDefault()
+//   result_name.textContent = input_name.value;
+// })
 
 
 // task 8
@@ -211,3 +221,23 @@ function draw(){
   }
 }
 setInterval(draw, 30)
+
+// theme (dark, white)
+const elementsTheme = document.querySelectorAll("#themeMode")
+const ButtonSwitch = document.querySelector("#btnSwitch")
+let isWhite = true;
+ButtonSwitch.addEventListener("click", function(){
+  isWhite = !isWhite
+  if(isWhite){
+    changeTheme("dark", "white")
+  } else{
+    changeTheme("white", "dark")
+  }
+})
+function changeTheme(classRemove, classAdd){
+  for(const element of elementsTheme){
+    console.log(element)
+    element.classList.remove(classRemove)
+    element.classList.add(classAdd)
+  }
+}

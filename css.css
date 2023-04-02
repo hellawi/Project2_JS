@@ -8,7 +8,6 @@ body{
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-
 .text-heading{
     font-size: 24px;
     display: flex;
@@ -87,6 +86,8 @@ section{
     font-size: 12px;
     text-align: center;
     color: #7E7E7E;
+    margin-right: 38px;
+    margin-left: 38px;
 }
 .operation_button{
     padding: 5px 10px;
@@ -102,10 +103,15 @@ section{
 }
 .operation{
     display: flex;
+    flex-direction: column;
 }
-.operationbox-2{
-    display: flex;
-    flex-wrap: wrap;
+.plus{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.minus{
+    margin-bottom: 10px;
+    margin-right: 38px;
 }
 .input__text{
     display: flex;
@@ -157,7 +163,8 @@ section{
     margin-right: 477px;
 }
 .result_heading{
-    color: #000;
+    font-size: 12px;
+    margin-left: 202px;
 }
 .task8_check{
     text-align: center;
@@ -211,12 +218,12 @@ section{
 }
 /* при отображении модального окно */
 .modal:target {
-    opacity: 1; /* делаем окно видимым */
+    opacity: 1; 
 	pointer-events: auto; /* элемент видим для событий мыши */
     overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
 .modall:target {
-    opacity: 1; /* делаем окно видимым */
+    opacity: 1;
 	pointer-events: auto; /* элемент видим для событий мыши */
     overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
@@ -235,8 +242,7 @@ section{
     max-width: 500px;
     margin: 30px auto; /* для отображения модального окна по центру */
 }
-}
-/* свойства для блока, содержащего контент модального окна */ 
+} 
 .modal-content, .modall-content {
     position: relative;
     display: -webkit-box;
@@ -373,15 +379,8 @@ input:checked + .slider::before{
     border-radius: 50%;
 }
 
-
-
-
 /* HEADER SECTION */
-
 .header {
-    /* background-color: #FFF;
-    
-    height: 80px; */
     width: 1440px;
     height: 80px;
     align-items: center;
@@ -398,11 +397,8 @@ input:checked + .slider::before{
     margin-left: 6px;
 }
 
-
-
 .dropbtn {
     background-color: rgba(0,0,0,0);
-    color: #000;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -517,17 +513,6 @@ body {
     background-size: cover;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* MAIN SECTION  */
 
 .mainbox {
@@ -540,8 +525,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
-
 
 /* FOOTER  */
 
@@ -561,7 +544,6 @@ footer{
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #000;
 }
 
 .p-contacts-box {
@@ -653,7 +635,6 @@ footer{
     font-weight: 400;
     font-size: 9px;
     line-height: 7px;
-    color: #000;
     padding-top: 18px;
 
 }
@@ -667,7 +648,6 @@ footer{
 .third-dropdown-a {
     border-radius: 0px 0px 20px 20px;
 }
-
 
 
 .world {
@@ -731,3 +711,13 @@ footer{
   .score {
     font-size: 26px;
   }
+
+
+.dark{
+    background: #464a47;
+    color: white;
+}
+.white{
+    background: #fff;
+    color: black;
+}
