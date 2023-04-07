@@ -721,3 +721,87 @@ footer{
     background: #fff;
     color: black;
 }
+
+
+.modal-start {
+    position: absolute;
+    width: 576px;
+    height: 316px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+
+
+.modal-window {
+    width: 392px;
+    height: 223px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.modal-name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.form_name {
+    display: flex;
+    flex-direction: column;
+    height: 88px;
+}
+
+.name_input {
+    padding: 10px 90px 10px 10px;
+    width: 169px;
+    height: 35px;
+    background: #D7D7D7;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin-bottom: 18px;
+
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.save {
+    margin: 0 auto;
+    padding: 10px 20px;
+    width: 105px;
+    height: 35px;
+    background: #000000;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
